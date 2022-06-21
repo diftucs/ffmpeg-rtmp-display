@@ -5,6 +5,13 @@
     make
 )
 
+(
+    echo "Building SDL" && \
+    cd SDL/ && \
+    ./configure && \
+    make
+)
+
 echo
 echo "Building main.cpp"
-g++ main.cpp -o main -g -Iffmpeg/libavfilter -Iffmpeg/libavcodec -Iffmpeg/libavdevice -Iffmpeg/libavformat -Iffmpeg/libavutil -Iffmpeg/libswresample -Iffmpeg/libswscale -Lffmpeg/libavfilter -Lffmpeg/libavcodec -Lffmpeg/libavdevice -Lffmpeg/libavformat -Lffmpeg/libavutil -Lffmpeg/libswresample -Lffmpeg/libswscale -lavfilter -lavcodec -lavdevice -lavformat -lavutil -lswresample -lswscale
+g++ main.cpp -o main -g -Iffmpeg/libavcodec -Iffmpeg/libavformat -Iffmpeg/libavutil -Iffmpeg/libswscale -ISDL/include -Lffmpeg/libavcodec -Lffmpeg/libavformat -Lffmpeg/libavutil -Lffmpeg/libswscale -LSDL2/build/.libs -lavcodec -lavformat -lavutil -lswscale -lSDL2

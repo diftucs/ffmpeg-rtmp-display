@@ -15,9 +15,9 @@
 	along with this program. If not, see <https://www.gnu.org/licenses/>
 */
 
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_events.h>
-#include <SDL2/SDL_thread.h>
+#include "SDL2/SDL.h"
+#include "SDL2/SDL_events.h"
+#include "SDL2/SDL_thread.h"
 
 extern "C"
 {
